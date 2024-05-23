@@ -8,7 +8,6 @@ export const Filters = () => {
             <SearchForm />
             <CategoryFilters />
             <PriceFilters />
-
             <button>Limpar Filtro</button>
         </div>
     )
