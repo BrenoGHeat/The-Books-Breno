@@ -1,13 +1,23 @@
-import { BookCard } from "./BookCard"
+import { books } from "../../../data/books";
+import { BookCard } from "./BookCard";
 
-export const BooksList = () => {
-    return(
-        <div>
-            <span>Livros Listados</span>
-            <ul>
-                <BookCard/>
+export const BooksList = ({ search, bookList }) => {
+  return (
+    <div>
+      <span>Livros Listados : {bookList.length} </span>
 
-            </ul>
-        </div>
-    )
-}
+        {search ? <p>Resultados de busca para: {search} </p> : null}
+
+
+      {bookList.length > 0 ? (
+        <ul>
+          {bookList.map((book) => (
+            <BookCard key={book.id} book={book} />
+          ))}
+        </ul>
+      ) : (
+        <p>Nenhum Resultado Encontrado</p>
+      )}
+    </div>
+  );
+};

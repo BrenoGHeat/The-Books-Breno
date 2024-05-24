@@ -2,13 +2,13 @@ import { CategoryFilters } from "./CategoryFilters"
 import { PriceFilters } from "./PriceFilters"
 import { SearchForm } from "./SearchForm"
 
-export const Filters = () => {
+export const Filters =  ( { cleanFilters , setSearch , setCategory} ) => {
     return(
         <div>
-            <SearchForm />
-            <CategoryFilters />
+            <SearchForm setSearch={setSearch}  />
+            <CategoryFilters setCategory={setCategory} />
             <PriceFilters />
-            <button>Limpar Filtro</button>
+            <button onClick={cleanFilters}>Limpar Filtro</button>
         </div>
     )
 }
