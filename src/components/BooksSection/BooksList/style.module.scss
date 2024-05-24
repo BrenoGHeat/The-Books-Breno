@@ -1,0 +1,21 @@
+
+.booksListBox{
+    & > span{
+        display: block;
+        text-align: end;
+        margin-bottom: 2.5rem;
+    }
+}
+
+.booksList {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4.375rem 2.1875rem;
+
+
+    @media(min-width: 960px){
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+
+}

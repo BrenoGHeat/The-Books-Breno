@@ -1,12 +1,13 @@
 import { categories } from "../../../../data/category"
+import styles from "./style.module.scss";
 
 export const CategoryFilters = ({setCategory}) => {
     return(
-        <div>
-            <h3>Filtrar por categoria</h3>
+        <div className={styles.categoryFilters}>
+            <h2 className="title2">Filtrar por categoria</h2>
             <ul>
                {categories.map(category =>(
-                <li key={category.id} onClick={() => setCategory(category.name)} >
+                <li className="paragraph"  key={category.id} onClick={() => setCategory(category.name)} >
                         {category.name}
                 </li>
                ))}

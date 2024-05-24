@@ -1,11 +1,17 @@
-
 import Logo from "../../assets/LogoWhite.svg";
+import styles from "./style.module.scss";
 
 export const Footer = () => {
-    return(
-        <footer>
-            <img src={Logo} alt="Logo Books Branco" />
-            <p>Todos os direitos reservados - Kenzie Academy Brasil</p>
-        </footer>
-    )
-}
+  return (
+    <footer className={styles.footer}>
+      <div className="container">
+        <div className={styles.flexBox}>
+          <img src={Logo} alt="Logo Books Branco" />
+          <p className="paragraph white">
+            Todos os direitos reservados - Kenzie Academy Brasil
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+};

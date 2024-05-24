@@ -1,15 +1,19 @@
-export const BookCard = ( {book} ) => {
-    return(
-        <li>
-            <div>
-                <h3>{book.name}</h3>
-                <p>{book.category}</p>
-            </div>
+import styles from "./style.module.scss";
 
-            <span>{book.price}</span>
+export const BookCard = ({ book }) => {
+  return (
+    <li className={styles.bookCard}>
+      <div>
+        <h3 className="title2">{book.name}</h3>
+        <p className="paragraph">{book.category}</p>
+      </div>
 
-
-        </li>
-
-    )
-}
+      <span className="paragraph bold">
+        {book.price.toLocaleString("pt-BR", {
+          style: "currency",
+          currency: "BRL",
+        })}
+      </span>
+    </li>
+  );
+};
